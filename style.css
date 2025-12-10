@@ -1,83 +1,416 @@
-/* Basic page style resets */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
-  font-size: 36px;
-  font-family: 'Bebas Neue', cursive;
+  color: #c7f0c7;
+  line-height: 1.4;
+  font-size: 16pt;
+  text-align: center;
+  font-family: Helvetica;
+  /*background-color: #6e0d1a;*/ /*just to have the color in case */
+  background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/Texturelabs_Paper_304L.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* FONTS */
+
+.truculenta-<uniquifier> {
+  font-family: "Truculenta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.berkshire-swash-regular {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caveat-brush-regular {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* MAIN AND HEAD ALL */
+
+header {
+  font-family: Caveat Brush;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+  width: auto;
+  padding: 0 18rem;
+  font-size: 1.25rem;
 }
 
 a {
-  display: block;
-  width: 300px;
-  padding: 15px 5px;
-  border-radius: 5px;
-  margin: 10% auto;
-  background-color: DodgerBlue;
-  text-align: center;
-  color: FloralWhite;
+  color: #637263;
+  text-decoration: none;
 }
 
 a:hover {
-  background-color: ForestGreen;
-  font-size: 46px;
+  color: #c7f0c7;
+  font-size: 1.35rem
 }
 
-.one {
-  transition-property: background-color;
-  transition-duration: 2s;
-  animation: scaleUp 400ms ease 200ms;
+main {
+  margin: 0 7rem;
 }
 
-.two {
-  transition-property: background-color;
-  transition-duration: 400ms;
-  animation: flip 400ms ease-out;
+h1 {
+  font-family: Berkshire Swash;
+  font-size: 4rem;
 }
 
-.three {
-  /* transition-property: background-color;
-  transition-duration: 400ms;
-  transition-timing-function: ease-out;
-  transition-delay: 200ms; */
-  transition: background-color 400ms ease-out 200ms;
-  animation: focus 400ms ease-in;
+h2 {
+  font-family: Truculenta;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
-.four {
-  transition: background-color 400ms ease-out 200ms, font-size 800ms linear 100ms;
+h3 {
+  font-family: Truculenta;
+  font-size: 1.5rem;
+  font-weight: 650;
+  margin-bottom: 1rem
 }
 
-.five {
-  transition: all 400ms ease-out 200ms;
+p {
+  font-family: Caveat Brush;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes scaleUp {
- 0% {
-   transition: scale(.5);
- }
-  100% {
-   transition: scale(1);
- }
+img {
+  width: 12.5rem;
+  height: auto;
 }
 
-@keyframes flip {
-  0% {
-    transform: rotateY(0);
+/* FOOTER */
+
+footer {
+  background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/snow.png?raw=true");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  line-height: 2rem;
+  align-items: center;
+}
+
+.background-link, .monkey-link {
+  font-family: Caveat Brush;
+}
+
+.background-link:hover, .monkey-link:hover {
+  color: #6e0d1a;
+  font-size: 1rem;
+}
+
+.footer-disclaimer {
+  font-size: 1rem;
+  color: #637263;
+}
+
+/* HOME */
+
+.invitation {
+  margin-bottom: -2rem;
+  margin-top: 1rem;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 3rem;
+  border-bottom: 2.5px solid #637263;
+  margin: 2rem 0;
+}
+
+.title-text {
+  animation: fade-up 0.75s ease-in-out 1000ms;
+}
+
+.paolo-icon {
+  animation: fade-up 0.75s ease-in-out 1100ms;
+}
+
+.me-icon {
+  animation: fade-up 0.75s ease-in-out 1200ms;
+}
+
+.hook {
+  margin-bottom: 3rem;
+}
+
+.info {
+  line-height: 2rem;
+  border: 2.5px solid #637263;
+  border-radius: 3rem;
+  margin: 0 15rem;
+  align-self: center;
+  padding: 1rem 0 0.5rem 0;
+  background-color: rgb(77 21 28 / 65%);
+}
+
+/* ABOUT */
+
+.about-title {
+  border-bottom: 2.5px solid #637263;
+  margin: 2rem 0;
+}
+
+.what-is-this {
+  margin-top: -2.2rem;
+}
+
+.scared {
+  margin: -2rem 0 2rem 0;
+}
+
+.about-text {
+  padding: 0 7.5rem;
+  margin-bottom: 2rem;
+}
+
+.monkey-icon {
+  width: 16.5rem;
+  height: auto;
+}
+
+/* SCHEDULE */
+
+.schedule-title {
+  border-bottom: 2.5px solid #637263;
+  margin: 2rem 0;
+}
+
+.what-we-doing {
+  margin-top: -2.2rem;
+}
+
+.planned {
+  margin: -2rem 0 2rem 0;
+}
+
+.events {
+  display: grid;
+  grid-template: repeat(4, 45%) / repeat(2, 50%);
+  gap: 1.5rem 0;
+  margin-bottom: 35rem;
+}
+
+.dinner-pic {
+  background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/dinner%202.png?raw=true");
+  background-size: 18rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.white-elephant-pic {
+  background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/white_elephant.png?raw=true");
+  background-size: 18rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.christmas-quizmas-pic {
+  background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/quizmas%202.png?raw=true");
+  background-size: 22rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mystery-pic {
+  background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/what%202.png?raw=true");
+  background-size: 18rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dinner-text, .white-elephant-text, .christmas-quizmas-text, .mystery-text {
+  text-align: left;
+  align-content: center;
+  padding: 0 2rem;
+  border: 2.5px solid #637263;
+  border-radius: 3rem;
+  background-color: rgb(77 21 28 / 65%);
+}
+
+
+
+/* PHONE SCREEN */
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+    background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/phone_bg.png?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  100% {
-    transform: rotateY(-100deg);
-  }
-}
 
-@keyframes focus {
-  0% {
-    filter: blur(12px);
+/* HEADER AND MAIN ALL */
+  
+  header {
+    padding: 0 3rem;
+    font-size: 1.25rem;
   }
-  100% {
-    filter: blur(0px);
+
+  main {
+    margin: 0 1.5rem;
   }
-}
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+
+/* FOOTER */
+
+  footer {
+    background-image: url("https://github.com/kristianmartinez016/Project-3/blob/main/assets/snow_2.png?raw=true");
+    background-size: 30rem;
+    background-position: top;
+    line-height: 1rem;
+    font-size: 1.25rem;
+    line-height: 3.5rem;
+    height: 17rem;
+    margin-top: 4rem
+  }
+
+  .footer-disclaimer {
+    font-size: 1.25rem;
+  }
+
+/* HOME */
+
+  .title {
+    grid-template: repeat(2, 50%) / repeat(2, 50%);
+    margin: 3rem 0;
+  }
+
+  .hook {
+    margin-bottom: 
+  }
+
+  .title-text {
+    order: 1;
+    grid-column: span 2;
+  }
+
+  .paolo-icon {
+    order: 2;
+    height: 10rem;
+    width: auto;
+    justify-self: end;
+  }
+
+  .me-icon {
+    order: 3;
+    height: 10rem;
+    width: auto;
+    justify-self: start;
+  }
+
+  .info {
+    margin: 0 1rem
+  }
+
+  /* ABOUT */
+
+  .about-text {
+    padding: 0 1rem;
+  }
+
+  .monkey-icon {
+    height: 22rem;
+    width: auto
+  }
+
+  /* SCHEDULE */
+
+  .what-we-doing {
+    padding: 0 5rem;
+  }
+
+  .events {
+    display: grid;
+    grid-template: repeat(8, 30%) / repeat(1, 100%);
+    gap: 1.5rem 0;
+    margin-bottom: 82rem;
+  }
+
+  .dinner-pic {
+    background-size: 19rem;
+    order: 1
+  }
+
+  .dinner-text {
+    order: 2;
+    text-align: center;
+  }
+
+  .white-elephant-pic {
+    background-size: 16.5rem;
+    order: 3;
+  }
+
+  .white-elephant-text {
+    order: 4;
+    text-align: center;
+  }
+
+  .christmas-quizmas-pic {
+    background-size: 21rem;
+    order: 5;
+  }
+
+  .christmas-quizmas-text {
+    order: 6;
+    text-align: center;
+    padding: 0 3rem;
+  }
+
+  .mystery-pic {
+    background-size: 18rem;
+    order: 7;
+  }
+
+  .mystery-text {
+    order: 8;
+    text-align: center;
+    padding: 0 4rem;
+  }
+
+
+  /* KEYFRAME ANIMATIONS */
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem); scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px); scale(1);
+    }
+  }
